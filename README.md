@@ -1,10 +1,10 @@
 # IPA_GUI
 Instructions and descriptions for the IPA GUI
 
-##Databases:
+## Databases:
 One of the most powerful features of the IPA method is that it is able to integrate the knowledge gained from previous experiments in the annotation process. There are three files that are used as the IPA database:
 
-###**1. Adducts file (required)**
+### **1. Adducts file (required)**
 <br />
 The ipaPy2 library requires a file contains all the information required for the computation of the adducts. An adducts.csv file is provided with the package [here](DB/adducts.csv). The file contains the most common adducts. If any exotic adduct (or in-source fragment) needs to be considered, the user must modify the file accordingly. The format required for the adducts file is shown below. 
 
