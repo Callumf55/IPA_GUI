@@ -101,7 +101,7 @@ adducts.head()
 </table>
 </div>
 
-### 2. MS<sup>1</sup> database file (required)**
+### **2. MS<sup>1</sup> database file (required)**
 <br />
 The IPA method requires a pandas dataframe containing the database against which the annotation is performed.
 This dataframe must contain the following columns in this exact order (optional columns can have empty fields):
@@ -344,7 +344,7 @@ DB.head()
 </table>
 </div>
 
-### 3. MS<sup>2</sup> database file (only required if MS<sup>2</sup> data is available)**
+### **3. MS<sup>2</sup> database file (only required if MS<sup>2</sup> data is available)**
 <br />
 This new implementation of the IPA method also allows the user to include MS<sup>2</sup> data in the annotation pipeline.
 In order to exploit this functionality an MS<sup>2</sup> spectra database must be provided.
@@ -456,7 +456,7 @@ DBMS2.head()
 ## Data preparation
 Before using the ipaPy2 package, the processed data coming from an untargeted metabolomics experiment must be properly prepared.
 
-### 1. MS<sup>1</sup> data**
+### **1. MS<sup>1</sup> data**
 
 The data must be organized in a pandas dataframe containing the following columns:
 - **ids**: an unique numeric id for each mass spectrometry feature feature
@@ -768,7 +768,7 @@ df.head()
 </table>
 </div>
 
-### 2. MS<sup>2</sup> data**
+### **2. MS<sup>2</sup> data**
 
 If fragmentation data was acquired during the experiment, it can be included in the IPA annotation process.
 To do so, the data must be organized in a pandas dataframe containing the following columns, in this exact order:
@@ -837,7 +837,7 @@ The Integrated Probabilistic Annotation (IPA) method can be applied in different
 
 This brief tutorial describes the most common scenarios the IPA method can be applied to.
 
-### 1. Mapping isotope patterns**
+### **1. Mapping isotope patterns**
 
 The first step of the IPA pipeline consists in the mapping of the isotope patterns within the dataset considered. This is achieved through the map_isotope_patterns(). The help of this function provides a detailed description of it.
 
@@ -993,7 +993,7 @@ df.head()
 
 Some data processing pipelines already have an isotope mapping function and the user can use them as long as they organise the data in the correct format.
 
-### 2. Compute all adducts**
+### **2. Compute all adducts**
 
 The second step of the pipeline consists in the calculation of all possible adducts that could be formed by the compounds included in the database.
 This is done by the function compute_all_adducts(). This function comes with a very detailed help.
@@ -1153,7 +1153,7 @@ allAddsPos.head()
 
 If the same database is used for subsequent experiments without introducing new information, it is recommended to save the results of this function into a .csv file. In this case, the user would need to repeat this step in the future only if the DB changed.
 
-### 3. Annotation based on MS<sup>1</sup> information**
+### **3. Annotation based on MS<sup>1</sup> information**
 
 At this point, the actual annotation process can start. If no fragmentation data is available, the MS1annotation() function should be used. This function annotates the dataset using the MS<sup>1</sup> data and the information stored in the dataset. A detailed description of the function can be accessed through the help:
 
@@ -1444,7 +1444,7 @@ annotations[999]
 Also in this case, all the prior probabilities associated with the four ions are exactly the same since all the ions have the same theoretical mass-to-charge ratio. However, the posterior probabilities are significantly different.
 Two of these ions (Coproporphyrinogen III M+2H and Coproporphyrinogen I M+2H) have charge +2, while the other two possible annotations have charge +1. The observed isotope pattern is consistent with an ion with charge +1 (i.e., difference between isotopes = 1), and this is reflected in the isotope score pattern and consequently on the posterior probabilities. Moreover, the retention time associated with this feature is within the range reported for L-Phenylalanine in the database. Therefore, the posterior probability associated with L-Phenylalanine 2M+H is the most highest.
 
-### 4. Annotation based on MS<sup>1</sup> and MS<sup>2</sup> information**
+### **4. Annotation based on MS<sup>1</sup> and MS<sup>2</sup> information**
 
 As already mentioned above, fragmentation data can be included in the annotation process by using the MSMSannotation() function. A detailed description of the function can be accessed through the help:
 
@@ -1721,7 +1721,7 @@ annotations[90]
 In this case, the cosine similarity score for the annotation L-Proline M+H is not very high. Moreover, the retention time assigned to this feature is outside both retention time ranges reported in the database for L-Proline and 3-Acetamidopropanal. Therefore, the most likely annotation for this feature is D-Proline M+H, the one annotation not rejected directly by the available evidence.
 It should be noted that the fragmentation pattern score has a rather weak effect on the posterior probability associated with L-Proline, given how close it is to the fragmentation pattern score associated features that do not have MS<sup>2</sup> info in the database (CSunk=0.7). The main reason why the D-Proline annotation appears to be the most likely is due to the fact that the retention time associated to this feature (63.45 s) is outside the retention time ranges associated with L-Proline and 3-Acetamidopropanal.
 
-### 5. Computing posterior probabilities integrating adducts connections**
+### **5. Computing posterior probabilities integrating adducts connections**
 
 Until this point, the putative annotations and the associated probabilities computed for each feature are independent from each other. However, the IPA method can be used to update the probabilities by considering the possible relationship between annotations.
 For example, the Gibbs_sampler_add() function uses a Gibbs sampler to estimate the posterior probabilities obtained by considering all possible adduct connections.
@@ -1925,7 +1925,7 @@ annotations[501]
 
 This feature is clustered with feature id=1, the most likely annotation of which is L-Proline M+H. As expected, considering the adducts connections the 'post Gibbs' probability associated with L-Proline 2M+H is significantly higher than the alternative.
 
-### 6. Computing posterior probabilities integrating biochemical connections**
+### **6. Computing posterior probabilities integrating biochemical connections**
 
 The IPA method can also update the probabilities associated to each possible annotations by considering all possible biochemical connections.
 
@@ -2358,7 +2358,7 @@ annotations[992]
 
 The probability associated with the D-Proline M+H is significantly higher after considering the biochemical connections. This is because D-Proline is biochemically connected to L-Proline (by proline racemase), and the most likely annotation for the feature id=1 is L-Proline M+H (>50%).
 
-### 7. Computing posterior probabilities integrating both adducts and biochemical connections**
+### **7. Computing posterior probabilities integrating both adducts and biochemical connections**
 
 It is also possible to run the Gibbs sampler considering biochemical and adduct connections at the same time.
 To do so, one can use the function Gibbs_sampler_bio_add().
@@ -2537,7 +2537,7 @@ annotations[1]
 </table>
 </div>
 
-### 8. Running the whole pipeline with a single function**
+### **8. Running the whole pipeline with a single function**
 
 Finally, the ipaPy2 library also include a wrapper function that allows running the whole IPA pipeline in one step.
 A detailed description of the function can be accessed with the help.
