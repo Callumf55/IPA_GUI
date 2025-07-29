@@ -837,7 +837,7 @@ The Integrated Probabilistic Annotation (IPA) method can be applied in different
 
 This brief tutorial describes the most common scenarios the IPA method can be applied to.
 
-**1. Mapping isotope patterns**
+### 1. Mapping isotope patterns**
 
 The first step of the IPA pipeline consists in the mapping of the isotope patterns within the dataset considered. This is achieved through the map_isotope_patterns(). The help of this function provides a detailed description of it.
 
