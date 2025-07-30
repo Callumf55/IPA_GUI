@@ -2798,3 +2798,7 @@ parameter used when computing the conditional priors. The parameter must be posi
 
 ### **Delta (Bio)**:
 parameter used when computing the conditional priors. The parameter must be positive. The smaller the parameter the more weight the adducts connections have on the posterior probabilities. Default 1.
+
+
+### **All out**:
+Logical value. If true the list of assignments found in each iteration is returned by the function. Default False.
