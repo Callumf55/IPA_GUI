@@ -2721,3 +2721,64 @@ annotations= ipa.simpleIPA(df,ionisation=1, DB=DB,adductsAll=adducts,ppm=3,dfMS2
     Done -  24.2 seconds elapsed
 
 ## **Advanced Settings**
+
+### **Clustering Cthr**: 
+Default value 0.8. Minimum correlation allowed in each cluster
+
+### **Clustering RTwin**:
+Default value 1. Maximum difference in RT time between features in the same cluster
+
+### **Clustering Intmode: 
+Defines how the representative intensity of each feature is computed. If 'max' (default) the maximum across samples is used. If 'ave' the average across samples is computed.
+
+
+### **Isotope Mass Diff**:
+Default value 1. Difference between isotopes of charge 1, does not need to be exact.
+
+
+### **Min Isotope Ratio**:
+Mininum intensity ratio expressed (Default value 1%). Only isotopes with intensity higher than MinIsoRatio% of the main isotope are considered.
+
+
+### **Isotope ppm**:
+Default value 100. Maximum ppm value allowed between 2 isotopes. It is very high on purpose.
+
+
+### **Electron Mass (me)**:
+accurate mass of the electron. Default 5.48579909065e-04.
+
+
+### **Intensity Ratio SD**:
+default 0.9. It represents the acceptable ratio between predicted intensity and observed intensity of isotopes. It is used to compute the shape parameters of the lognormal distribution used to calculate the isotope pattern scores as sqrt(1/ratiosd).
+
+
+### **ppmunk**:
+ppm associated to the 'unknown' annotation. If not provided equal to ppm.
+
+
+### **ratiounk**:
+isotope ratio associated to the 'unknown' annotation. If not provided equal to 0.5.
+
+
+### **ppmthr**:
+Maximum ppm possible for the annotations. If not provided equal to 2*ppm.
+
+
+### **pRTNone**:
+Multiplicative factor for the RT if no RTrange present in the database. If not provided equal to 0.8.
+
+
+### **pRTout**:
+Multiplicative factor for the RT if measured RT is outside the RTrange present in the database. If not provided equal to 0.4.
+
+
+### **Burn-in Iterations**:
+number of iterations to be ignored when computing posterior probabilities. If None, is set to 10% of total iterations.
+
+
+### **Delta (Adduct)**:
+parameter used when computing the conditional priors. The parameter must be positive. The smaller the parameter the more weight the adducts connections have on the posterior probabilities. Default 1.
+
+
+### **Delta (Bio)**:
+parameter used when computing the conditional priors. The parameter must be positive. The smaller the parameter the more weight the adducts connections have on the posterior probabilities. Default 1.
