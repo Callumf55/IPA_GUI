@@ -2720,6 +2720,15 @@ annotations= ipa.simpleIPA(df,ionisation=1, DB=DB,adductsAll=adducts,ppm=3,dfMS2
     parsing results ...
     Done -  24.2 seconds elapsed
 
+
+## Basic Settings:
+
+### PPM: 
+accuracy of the MS instrument used
+
+### Gibbs Sampler Iterations:
+Number of times the gibbs sampler runs
+
 ## **Advanced Settings**
 
 ### **Clustering Cthr**: 
