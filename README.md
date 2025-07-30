@@ -774,7 +774,7 @@ df.head()
 ### **2. MS<sup>2</sup> data**
 
 If fragmentation data was acquired during the experiment, it can be included in the IPA annotation process.
-To do so, the data must be organized in a pandas dataframe containing the following columns, **in this exact order** :
+To do so, the data must be organized in a pandas dataframe containing the following columns, **in this exact order**:
 
 - **id**: an unique id for each feature for which the MS<sup>2</sup> spectrum was acquired (same as in MS<sup>1</sup>)
 - **spectrum**: string containing the spectrum information in the following format 'mz1:Int1 mz2:Int2 mz3:Int3 ...'
