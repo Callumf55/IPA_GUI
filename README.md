@@ -2772,6 +2772,22 @@ Multiplicative factor for the RT if no RTrange present in the database. If not p
 Multiplicative factor for the RT if measured RT is outside the RTrange present in the database. If not provided equal to 0.4.
 
 
+### **mzdCS**:
+maximum mz difference allowed when computing cosine similarity scores. If one wants to use this parameter instead of ppmCS, this must be set to 0. Default 0.
+
+
+### **ppmCS**:
+maximum ppm allowed when computing cosine similarity scores. If one wants to use this parameter instead of mzdCS, this must be set to 0. Default 10.
+
+
+### **CSunk**:
+cosine similarity score associated with the 'unknown' annotation. Default 0.7
+
+
+### **evfilt**:
+Default value False. If true, only spectrum acquired with the same collision energy are considered.
+
+
 ### **Burn-in Iterations**:
 number of iterations to be ignored when computing posterior probabilities. If None, is set to 10% of total iterations.
 
