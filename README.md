@@ -347,8 +347,8 @@ DB.head()
 
 ### **3. MS<sup>2</sup> database file (only required if MS<sup>2</sup> data is available)**
 <br />
-This new implementation of the IPA method also allows the user to include MS<sup>2</sup> data in the annotation pipeline.
-In order to exploit this functionality an MS<sup>2</sup> spectra database must be provided.
+This new implementation of the IPA method also allows the user to include MS<sup>2</sup> data in the annotation pipeline.  
+In order to exploit this functionality, an MS<sup>2</sup> spectra database must be provided.  
 The MS<sup>2</sup> database must be provided as a pandas dataframe including the following columns in **this exact order**:
 
 - **compound_id**: unique id for each compound, it must match with the ids used in the MS<sup>1</sup> database - *necessary*
