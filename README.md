@@ -102,21 +102,22 @@ adducts.head()
 </div>
 
 ### **2. MS<sup>1</sup> database file (required)**
-<br />
-The IPA method requires a pandas dataframe containing the database against which the annotation is performed.
-This dataframe must contain the following columns in this exact order (optional columns can have empty fields):
-- **id**: unique id of the database entry (e.g., 'C00031') - *necessary*
-- **name**: compound name (e.g., 'D-Glucose') - *necessary*
-- **formula**: chemical formula (e.g., 'C6H12O6') - *necessary*
-- **inchi**: inchi string - *optional*
-- **smiles**: smiles string - *optional*
-- **RT**: if known, retention time range (in seconds) where this compound is expected to elute (e.g., '30;60') - *optional*
-- **adductsPos**: list of adducts that should be considered in Positive mode for this entry (e.g.,'M+Na;M+H;M+') - *necessary*
-- **adductsNeg**: list of adducts that should be considered in Negative mode for this entry (e.g.,'M-H;M-2H') - *necessary*
-- **description**: comments on the entry - *optional*
-- **pk**: previous knowledge on the likelihood of this compound to be present in the sample analyse. The value has to be between 1 (compound highly likely to be present in the sample) and 0 (compound cannot be present in the sample).
-- **MS2**: id for the MS<sup>2</sup> database entries related to this compound - *optional*
-- **reactions**: list of reaction ids involving this compound (e.g., 'R00010 R00015 R00028'). If required, these can be used to find possible biochemical connections - *optional* 
+
+The IPA method requires a pandas dataframe containing the database against which the annotation is performed.  
+This dataframe must contain the following columns in **this exact order** (optional columns can have empty fields):
+
+- **id**: unique id of the database entry (e.g., `'C00031'`) — *necessary*
+- **name**: compound name (e.g., `'D-Glucose'`) — *necessary*
+- **formula**: chemical formula (e.g., `'C6H12O6'`) — *necessary*
+- **inchi**: InChI string — *optional*
+- **smiles**: SMILES string — *optional*
+- **RT**: retention time range in seconds (e.g., `'30;60'`) — *optional*
+- **adductsPos**: list of adducts in Positive mode (e.g., `'M+Na;M+H;M+'`) — *necessary*
+- **adductsNeg**: list of adducts in Negative mode (e.g., `'M-H;M-2H'`) — *necessary*
+- **description**: comments on the entry — *optional*
+- **pk**: prior probability (0 to 1) of the compound being present in the sample — *optional*
+- **MS2**: ID linking to MS<sup>2</sup> entries — *optional*
+- **reactions**: list of reaction IDs (e.g., `'R00010 R00015 R00028'`) — *optional*
 
 The column names must be the ones reported here.
 While users are strongly advised to build their own *ad-hoc* database to match their specific instrument setup and sample types, [here](DB/IPA_MS1.csv) you can find a relatively big example database.
