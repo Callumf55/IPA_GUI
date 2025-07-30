@@ -2719,3 +2719,5 @@ annotations= ipa.simpleIPA(df,ionisation=1, DB=DB,adductsAll=adducts,ppm=3,dfMS2
 
     parsing results ...
     Done -  24.2 seconds elapsed
+
+## **Advanced Settings**
