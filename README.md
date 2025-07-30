@@ -2728,7 +2728,7 @@ Default value 0.8. Minimum correlation allowed in each cluster
 ### **Clustering RTwin**:
 Default value 1. Maximum difference in RT time between features in the same cluster
 
-### **Clustering Intmode: 
+### **Clustering Intmode**: 
 Defines how the representative intensity of each feature is computed. If 'max' (default) the maximum across samples is used. If 'ave' the average across samples is computed.
 
 
